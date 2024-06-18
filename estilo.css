@@ -1,163 +1,197 @@
+/* Importa los íconos de Bootstrap desde un CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+/* Resetea márgenes, padding y usa box-sizing border-box para todos los elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos generales para el body */
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
+    height: 100vh; /* Ocupa el 100% del viewport height */
+    width: 100%; /* Ocupa el 100% del viewport width */
+    border: 2px solid blue; /* Borde azul alrededor del body */
+    position: relative;
 }
 
+/* Estilos para el header (encabezado) */
 header {
-    width: 100%;
-    height: 50px;
-    background-color: #004BBE;
-    color: white;
-    padding: 5px 0;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: left 0.6s ease; /* Transición sincronizada con el sidebar */
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra gris suave */
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura fija de 50px */
+    background-color: #004BBE; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    padding: 5px 0; /* Espaciado interior */
+    text-align: center; /* Texto centrado */
+    position: fixed; /* Fijado en la parte superior */
+    top: 0; /* Distancia desde arriba */
+    left: 0; /* Distancia desde la izquierda */
+    z-index: 1; /* Capa z-index */
+    transition: left 0.6s ease; /* Transición animada */
+    display: flex; /* Contenedor de tipo flex */
+    align-items: center; /* Alinea elementos al centro verticalmente */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra */
 }
 
+/* Estilos adicionales para el header cuando se reduce a la izquierda */
 header.reduced-left {
-    left: 250px;
+    left: 250px; /* Movimiento hacia la derecha cuando se reduce */
 }
 
+/* Estilos para el botón de menú (toggle) */
 .menu-toggle {
-    display: none;
+    display: none; /* Oculta el toggle de menú */
 }
 
+/* Estilos para el botón derecho */
+.btn-derecho {
+    cursor: pointer; /* Cursor puntero */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    position: absolute; /* Posición absoluta */
+    right: 90px; /* Distancia desde la derecha */
+}
+
+/* Estilos para la etiqueta del toggle de menú */
 label[for="menu-toggle"] {
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-left: 20px; /* Ajusta este valor para mover el ícono más a la derecha */
+    cursor: pointer; /* Cursor puntero */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    margin-left: 20px; /* Margen izquierdo */
 }
 
+/* Estilos para la barra lateral (sidebar) */
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: white;
-    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    transform: translateX(-100%);
-    transition: transform 0.6s ease; /* Asegúrate de que esta transición coincida con la del header */
+    position: fixed; /* Posición fija */
+    top: 0; /* Distancia desde arriba */
+    left: -250px; /* Inicialmente fuera de la vista hacia la izquierda */
+    width: 250px; /* Ancho de 250px */
+    height: 100%; /* Altura del 100% */
+    background-color: white; /* Color de fondo blanco */
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 2; /* Capa z-index */
+    transition: left 0.6s ease; /* Transición animada */
 }
 
+/* Estilos adicionales para mostrar la barra lateral */
 .sidebar.visible {
-    transform: translateX(0);
+    left: 0; /* Muestra la barra lateral moviéndola hacia la izquierda */
 }
 
+/* Estilos para los enlaces dentro de la barra lateral */
 .link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    padding: 10px;
+    display: flex; /* Contenedor de tipo flex */
+    align-items: center; /* Alinea elementos al centro verticalmente */
+    text-decoration: none; /* Sin decoración de texto */
+    color: black; /* Color de texto negro */
+    padding: 10px; /* Espaciado interior */
 }
 
+/* Estilos para la imagen dentro de los enlaces de la barra lateral */
 .link img {
-    margin-right: 5px;
-    height: 35px;
+    margin-right: 5px; /* Margen derecho de la imagen */
+    height: 35px; /* Altura de la imagen */
 }
 
+/* Estilos para el texto dentro de los enlaces de la barra lateral */
 .link-text {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Contenedor de tipo flex */
+    flex-direction: column; /* Dirección de columna */
 }
 
+/* Estilos para el texto destacado dentro de los enlaces de la barra lateral */
 .link-text .highlight {
-    color: black;
-    font-weight: bold;
-    font-size: 0.8em;
+    color: black; /* Color de texto negro */
+    font-weight: bold; /* Fuente en negrita */
+    font-size: 0.8em; /* Tamaño de fuente */
 }
 
+/* Estilos para el texto pequeño dentro de los enlaces de la barra lateral */
 .link-text .small {
-    font-size: 0.6em;
+    font-size: 0.6em; /* Tamaño de fuente más pequeño */
 }
 
+/* Estilos para el span pequeño en el header */
 .small-span {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    margin-left: 90px;
+    font-size: 0.8em; /* Tamaño de fuente */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    margin-left: 90px; /* Margen izquierdo */
 }
 
+/* Estilos para la navegación (nav) */
 .nav {
-    width: 250px;
+    width: 250px; /* Ancho de 250px */
 }
 
+/* Estilos para los enlaces dentro de la navegación */
 .nav_link--inside {
-    border-radius: 6px;
-    padding-left: 10px;
+    border-radius: 6px; /* Borde redondeado */
+    padding-left: 10px; /* Espaciado interior izquierdo */
 }
 
+/* Estilos para la lista (ul) dentro de la barra lateral */
 .lista {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 0 16px 16px 0;
+    width: 100%; /* Ancho del 100% */
+    display: flex; /* Contenedor de tipo flex */
+    justify-content: center; /* Alineación central horizontal */
+    flex-direction: column; /* Dirección de columna */
+    border-radius: 0 16px 16px 0; /* Borde redondeado */
 }
 
+/* Estilos para los ítems de la lista (li) dentro de la barra lateral */
 .list_item {
-    list-style: none;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+    list-style: none; /* Sin viñetas */
+    width: 100%; /* Ancho del 100% */
+    text-align: center; /* Texto centrado */
+    overflow: hidden; /* Ocultar desbordamiento */
 }
 
+/* Estilos para los ítems de la lista que son clickeables */
 .list_item--click {
-    cursor: pointer;
+    cursor: pointer; /* Cursor puntero */
 }
 
+/* Estilos para los botones dentro de los ítems de la lista */
 .list_button {
-    display: flex;
-    gap: 1em;
-    width: 70%;
+    display: flex; /* Contenedor de tipo flex */
+    gap: 1em; /* Espacio entre elementos */
+    width: 70%; /* Ancho del 70% */
 }
 
+/* Estilos para el ícono de flecha hacia abajo */
 .bi-caret-down {
-    margin-left: auto;
+    margin-left: auto; /* Margen izquierdo automático */
 }
 
+/* Estilos para los enlaces de navegación */
 .nav_link {
-    color: #303440;
-    display: block;
-    text-decoration: none;
+    color: #303440; /* Color de texto */
+    display: block; /* Bloque de visualización */
+    text-decoration: none; /* Sin decoración de texto */
 }
 
+/* Estilos para el hover de los enlaces dentro de la navegación */
 .nav_link--inside:hover {
-    background: gray;
+    background: gray; /* Fondo gris al hacer hover */
 }
 
+/* Estilos para la lista desplegable (submenu) */
 .list__show {
-    width: 80%;
-    border-left: 1px solid #303440;
-    list-style: none;
-    transition: height .4s;
-    height: 0;
+    width: 80%; /* Ancho del 80% */
+    border-left: 1px solid #303440; /* Borde izquierdo sólido */
+    list-style: none; /* Sin viñetas */
+    transition: height .4s; /* Transición de altura */
+    height: 0; /* Altura inicial cero */
 }
 
-.lista {
-    list-style: none;
+/* Estilos para el logotipo principal (logo_pri) */
+.logo_pri {
+    border: 2px solid red;
+    width: 20%;
+    margin: 0 auto; /* Centra horizontalmente */
+    text-align: center; /* Alinea el contenido al centro */
+    position: absolute; /* Ajusta posición */
+    top: 50%; /* Ubica en el centro vertical */
+    left: 50%; /* Ubica en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra exactamente */
 }
-
-.right-toggle {
-    position: absolute;
-    right: 90px; /* Ajustar esta posición para mover el checkbox a la izquierda */
-}
-
-
-
