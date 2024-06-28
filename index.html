@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Uni</title>
 </head>
 <body>
@@ -14,15 +15,18 @@
         <label for="menu-toggle"><i class="bi bi-list"></i></label>
         <span class="small-span">Ayquipa Quispe John David</span>
         <div class="btn-derecho">
-        <input type="checkbox" id="right-toggle" class="right-toggle">
-        <i class="bi bi-three-dots-vertical"></i>
+            <label for="right-toggle" class="toggle-label"><i class="bi bi-three-dots-vertical"></i></label>
+            <input type="checkbox" id="right-toggle" class="right-toggle">
         </div>
     </header>
     <div class="logo_pri">
-        <p>hola mundo que quieres que haga hoy si termino cambiando de carrera?</p>
-        <h1>hola mundo</h1>
-        <h2>que tal</h2>
+            <h1>BIENVENIDO AL EARPFIM</h1>
+            <h2>ZONA USUARIO</h2>
+        <div class="tuerca">
+        <img src="tuerca.gif" alt="">
+        </div>
     </div>
+    
     <div class="sidebar" id="sidebar">
         <a href="#" class="link">
             <img src="Escudo_UNI.png" alt="Logo" >
@@ -37,12 +41,10 @@
             <ul class="lista">
                 <!-- Primer link general-->
                 <li class="list_item list_item--click">
-                    <div class="list_button list_button--click ">
-                        <div class="d-flex">
-                            <i class="bi bi-suitcase-lg-fill me-2"></i>
+                    <div class="list_button list_button--click">
+                            <i class="bi bi-suitcase-lg-fill"></i>
                             <a href="sub_menus/menu2.html" class="nav_link">General</a>
-                            <i class=" bi-caret-down"></i>   
-                        </div>
+                            <i class="bi bi-caret-down-fill arrow"></i>   
                     </div>
                     <!-- Sub niveles del link general-->
                     <ul class="list__show">
@@ -90,12 +92,9 @@
                 <!-- Segundo link general-->
                 <li class="list_item list_item--click">
                     <div class="list_button list_button--click ">
-                        <div class="d-flex ">
                             <i class="bi bi-bell-fill me-2"></i>
                             <a href="#" class="nav_link">Administrador</a>
-                            <i class=" bi-caret-down"></i>
-                        </div>
-                        
+                            <i class="bi bi-caret-down-fill arrow"></i>           
                     </div>
                     <ul class="list__show">
                         <li class="list_inside">
@@ -112,11 +111,9 @@
                 <!-- Cuarto link general-->
                 <li class="list_item list_item--click">
                     <div class="list_button list_button--click ">
-                        <div class="d-flex ">
                             <i class="bi bi-bell-fill me-2"></i>
                             <a href="#" class="nav_link">Acreditación FIM</a>
-                            <i class="bi bi-caret-down"></i>
-                        </div>
+                            <i class="bi bi-caret-down-fill  arrow"></i>
                         
                     </div>
                     <ul class="list__show">
@@ -137,7 +134,7 @@
                     <div class="list_button list_button--click ">
                             <i class="bi bi-bell-fill me-2"></i>
                             <a href="#" class="nav_link">Virtual</a>
-                            <i class="bi bi-caret-down"></i>
+                            <i class="bi bi-caret-down-fill arrow"></i>
                         
                     </div>
                     <ul class="list__show">
@@ -159,7 +156,7 @@
                         <div class="d-flex ">
                             <i class="bi bi-bell-fill me-2"></i>
                             <a href="#" class="nav_link">Documentos academicos</a>
-                            <i class="bi bi-caret-down"></i>
+                            <i class="bi bi-caret-down-fill arrow"></i>
                         </div>
                         
                     </div>
@@ -178,14 +175,16 @@
             </ul>    
         </nav>
     </div>
-    <script>
-        document.getElementById('menu-toggle').addEventListener('change', function() {
-            document.getElementById('sidebar').classList.toggle('visible', this.checked);
-            document.getElementById('header').classList.toggle('reduced-left', this.checked);
-        });
-    </script>
+
+    <div class="m-derecho">
+        <div class="info">
+            <p>Roles<br>
+            <img src="" alt="">
+            <h9>Mi Informacion</h9><br>
+            <h9>Reiniciar Clave</h9><br>
+            <h9>Cerrar sesion</h9></p>
+        </div>
+    </div>
     <script src="main.js"></script>   
-    <!--JavaScript Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

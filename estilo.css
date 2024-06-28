@@ -13,7 +13,6 @@ body {
     font-family: Arial, sans-serif;
     height: 100vh; /* Ocupa el 100% del viewport height */
     width: 100%; /* Ocupa el 100% del viewport width */
-    border: 2px solid blue; /* Borde azul alrededor del body */
     position: relative;
 }
 
@@ -139,11 +138,11 @@ label[for="menu-toggle"] {
 }
 
 /* Estilos para los ítems de la lista (li) dentro de la barra lateral */
-.list_item {
+.list_item{
     list-style: none; /* Sin viñetas */
     width: 100%; /* Ancho del 100% */
     text-align: center; /* Texto centrado */
-    overflow: hidden; /* Ocultar desbordamiento */
+    overflow: hidden;   /*Ocultar desbordamiento */
 }
 
 /* Estilos para los ítems de la lista que son clickeables */
@@ -152,15 +151,21 @@ label[for="menu-toggle"] {
 }
 
 /* Estilos para los botones dentro de los ítems de la lista */
-.list_button {
+.list_button{
     display: flex; /* Contenedor de tipo flex */
     gap: 1em; /* Espacio entre elementos */
     width: 70%; /* Ancho del 70% */
 }
 
+/* Rotación de ícono de flecha hacia abajo */
+.arrow .bi-caret-down {
+    transform: rotate(90deg);
+}
+
 /* Estilos para el ícono de flecha hacia abajo */
-.bi-caret-down {
+.bi-caret-down-fill {
     margin-left: auto; /* Margen izquierdo automático */
+    transition: transform 0.3s;
 }
 
 /* Estilos para los enlaces de navegación */
@@ -170,24 +175,32 @@ label[for="menu-toggle"] {
     text-decoration: none; /* Sin decoración de texto */
 }
 
+/* Estilos adicionales para los enlaces dentro de la navegación */
+.nav_link--inside {
+    border-radius: 6px;
+    padding-left: 10px; 
+    text-align: left;   
+}
+
 /* Estilos para el hover de los enlaces dentro de la navegación */
 .nav_link--inside:hover {
-    background: gray; /* Fondo gris al hacer hover */
+    background: #8db8f9; /* Fondo gris al hacer hover */
 }
 
 /* Estilos para la lista desplegable (submenu) */
 .list__show {
+    background-color: #EDEDED; /* Color de fondo gris */
     width: 80%; /* Ancho del 80% */
     border-left: 1px solid #303440; /* Borde izquierdo sólido */
     list-style: none; /* Sin viñetas */
-    transition: height .4s; /* Transición de altura */
+    transition: height 0.4s; /* Transición de altura */
     height: 0; /* Altura inicial cero */
 }
 
 /* Estilos para el logotipo principal (logo_pri) */
 .logo_pri {
-    border: 2px solid red;
-    width: 20%;
+    width: 50%;
+    height: 45%;
     margin: 0 auto; /* Centra horizontalmente */
     text-align: center; /* Alinea el contenido al centro */
     position: absolute; /* Ajusta posición */
@@ -195,3 +208,43 @@ label[for="menu-toggle"] {
     left: 50%; /* Ubica en el centro horizontal */
     transform: translate(-50%, -50%); /* Centra exactamente */
 }
+
+/* Estilos adicionales para los botones dentro de los ítems de la lista */
+.list_button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Estilos para la imagen del logotipo principal */
+.logo_pri img {
+    height: 150px; /* Altura de la imagen */
+}
+
+/* Estilos para el contenedor derecho */
+.m-derecho {
+    border: 5px dashed blue;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 10%;
+    border: 2px solid black;
+    padding: 15px;
+    background-color: lightgreen;
+}
+
+/* Estilos para el primer encabezado */
+h1 {
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    letter-spacing: 0.1em; /* Espaciado entre letras */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el segundo encabezado */
+h2 {
+    font-size: 2.5em; /* Tamaño de fuente mediano */
+    color: #666; /* Color del texto */
+    margin-top: 0.5em; /* Espaciado superior */
+}
+
+
