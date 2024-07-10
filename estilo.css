@@ -127,47 +127,6 @@ label[for="menu-toggle"] {
     border-radius: 6px; /* Borde redondeado */
     padding-left: 10px; /* Espaciado interior izquierdo */
 }
-
-/* Estilos para la lista (ul) dentro de la barra lateral */
-.lista {
-    width: 100%; /* Ancho del 100% */
-    display: flex; /* Contenedor de tipo flex */
-    justify-content: center; /* Alineación central horizontal */
-    flex-direction: column; /* Dirección de columna */
-    border-radius: 0 16px 16px 0; /* Borde redondeado */
-}
-
-/* Estilos para los ítems de la lista (li) dentro de la barra lateral */
-.list_item{
-    list-style: none; /* Sin viñetas */
-    width: 100%; /* Ancho del 100% */
-    text-align: center; /* Texto centrado */
-    overflow: hidden;   /*Ocultar desbordamiento */
-}
-
-/* Estilos para los ítems de la lista que son clickeables */
-.list_item--click {
-    cursor: pointer; /* Cursor puntero */
-}
-
-/* Estilos para los botones dentro de los ítems de la lista */
-.list_button{
-    display: flex; /* Contenedor de tipo flex */
-    gap: 1em; /* Espacio entre elementos */
-    width: 70%; /* Ancho del 70% */
-}
-
-/* Rotación de ícono de flecha hacia abajo */
-.arrow .bi-caret-down {
-    transform: rotate(90deg);
-}
-
-/* Estilos para el ícono de flecha hacia abajo */
-.bi-caret-down-fill {
-    margin-left: auto; /* Margen izquierdo automático */
-    transition: transform 0.3s;
-}
-
 /* Estilos para los enlaces de navegación */
 .nav_link {
     color: #303440; /* Color de texto */
@@ -186,12 +145,58 @@ label[for="menu-toggle"] {
 .nav_link--inside:hover {
     background: #8db8f9; /* Fondo gris al hacer hover */
 }
+/* Estilos para la lista (ul) dentro de la barra lateral */
+.lista {
+    width: 250px; /* Ancho fijo para la lista */
+    display: flex; /* Contenedor de tipo flex */
+    flex-direction: column; /* Dirección de columna */
+    justify-content: flex-start; /* Alineación al inicio */
+    align-items: stretch; /* Estirar elementos verticalmente */
+    padding: 10px; /* Espaciado interior */
+    margin-left: -3px; /* Margen izquierdo cero */
+    margin-right: 10px; /* Margen derecho */
+}
+
+/* Estilos para los ítems de la lista (li) dentro de la barra lateral */
+.list_item{
+    list-style: none; /* Sin viñetas */
+    width: 100%; /* Ancho del 100% */
+    text-align: center; /* Texto centrado */
+    overflow: hidden;   /*Ocultar desbordamiento */
+    margin-bottom: 5px; /* Añade espacio entre cada ítem de la lista */
+}
+
+/* Estilos para los ítems de la lista que son clickeables */
+.list_item--click {
+    cursor: pointer; /* Cursor puntero */
+}
+
+/* Estilos para los botones dentro de los ítems de la lista */
+.list_button{
+    display: flex; /* Contenedor de tipo flex */
+    align-items: center; /* Alinea elementos verticalmente */
+    gap: 3em; /* Espacio entre elementos */
+    width: 100%; /* Ancho del 100% */
+}
+
+/* Rotación de ícono de flecha hacia abajo */
+.arrow .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
+.arrow{
+    display: flex; /* Contenedor de tipo flex */
+    align-items: center; /* Alinea elementos verticalmente */
+}
+/* Estilos para el ícono de flecha hacia abajo */
+.bi-caret-down-fill {
+    margin-left: auto; /* Mueve la flecha a la derecha */
+    transition: transform 0.3s;
+}
 
 /* Estilos para la lista desplegable (submenu) */
 .list__show {
     background-color: #EDEDED; /* Color de fondo gris */
-    width: 80%; /* Ancho del 80% */
-    border-left: 1px solid #303440; /* Borde izquierdo sólido */
+    width: 100%; /* Ancho del 80% */
     list-style: none; /* Sin viñetas */
     transition: height 0.4s; /* Transición de altura */
     height: 0; /* Altura inicial cero */
@@ -221,18 +226,6 @@ label[for="menu-toggle"] {
     height: 150px; /* Altura de la imagen */
 }
 
-/* Estilos para el contenedor derecho */
-.m-derecho {
-    border: 5px dashed blue;
-    position: absolute;
-    top: 50px;
-    right: 0px;
-    width: 10%;
-    border: 2px solid black;
-    padding: 15px;
-    background-color: lightgreen;
-}
-
 /* Estilos para el primer encabezado */
 h1 {
     font-size: 2.5em; /* Tamaño de fuente grande */
@@ -246,5 +239,30 @@ h2 {
     color: #666; /* Color del texto */
     margin-top: 0.5em; /* Espaciado superior */
 }
-
-
+/* Estilos para el contenedor derecho */
+.m-derecho {
+    position: absolute;
+    top: 49px;
+    right: 0px;
+    width: 147px;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: #F6F6F6;
+    font-size: 0.90em; /* Tamaño de fuente grande */
+}
+.imagen-pequena {
+    width: 35px;
+    display: block;
+    position: center;
+    border: 2px solid yellow;
+}
+.rol{
+    border: 2px solid blue;
+    width:130px ;
+}
+.azul{
+    border: 2px solid red;
+    width: 130px;
+    right: 0px;
+    border-bottom: 1px solid black;
+}
